@@ -1,0 +1,16 @@
+---
+title: "CFB Model selection"
+output: html_notebook
+---
+
+# Import Dataset
+```{r}
+cfb_df <-read.csv("cfb_dataset_key_variables.csv")
+attach(cfb_df)
+```
+# Muliple Linear Regression
+```{r}
+multiple_lm <- lm(Wins ~ ., cfb_df)
+summary(multiple_lm)
+```
+
